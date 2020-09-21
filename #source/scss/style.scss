@@ -1,2 +1,226 @@
+@font-face {
+	font-family: "Gotham";
+	src: url("../../fonts/GothamPro.eot");
+	src: local("☺"), url("../fonts/GothamPro.woff") format("woff"), url("../fonts/GothamPro.ttf") format("truetype"),
+		url("../fonts/GothamPro.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Gotham";
+	src: url("../fonts/GothamPro-Bold.eot");
+	src: local("☺"), url("../fonts/GothamPro-Bold.woff") format("woff"),
+		url("../fonts/GothamPro-Bold.ttf") format("truetype"), url("../fonts/GothamPro-Bold.svg") format("svg");
+	font-weight: 700;
+	font-style: normal;
+}
 @import "_nullstyle";
 
+html,
+body {
+	height: 100%;
+	font-family: "Gotham", sans-serif;
+}
+.container {
+	max-width: 1470px;
+	padding: 0px 20px;
+	margin: 0 auto;
+}
+.header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+	}
+}
+.header__body {
+	position: relative;
+	z-index: 2;
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	align-items: center;
+}
+.header__logo {
+	flex: 0 0 190px;
+	img {
+		max-width: 100%;
+		display: block;
+	}
+	@media (max-width: 360px) {
+		flex: 0 0 150px;
+	}
+}
+.header__list {
+	display: flex;
+	li {
+		list-style: none;
+	}
+}
+.header__link {
+	font-size: 16px;
+	transition: all 0.3s ease 0s;
+	color: #000;
+	display: table;
+	&:hover {
+		background: linear-gradient(0deg, #0c988d 0%, #6bb86c 100%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		border-bottom: 1px solid #0c988d;
+	}
+}
+.mainscreen {
+	padding: 100px 0 0 0;
+	font-size: 36px;
+}
+
+.popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	top: 0;
+	left: 0;
+	z-index: 51;
+}
+.popup__body {
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 30px 10px;
+}
+.popup__content {
+	background-color: #fff;
+	color: #000;
+	max-width: 600px;
+	padding: 60px;
+}
+.popup__close {
+}
+.popup__title {
+	font-weight: bold;
+	font-size: 48px;
+	line-height: 120%;
+	text-align: center;
+	background: linear-gradient(0deg, #0c988d 0%, #6bb86c 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin-bottom: 32px;
+}
+.popup__form {
+}
+.popup__form-pair {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 24px;
+	label {
+		font-size: 16px;
+		line-height: 150%;
+		margin-bottom: 8px;
+		a {
+			background: linear-gradient(0deg, #0c988d 0%, #6bb86c 100%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			border-bottom: 1px solid #0c988d;
+		}
+	}
+	input {
+		border: 1px solid #a4a4a4;
+		width: 100%;
+		padding: 12px 20px;
+		height: 48px;
+		&::placeholder {
+			font-family: "Gotham";
+			font-size: 16px;
+			line-height: 150%;
+			color: #ababab;
+		}
+	}
+	textarea {
+		border: 1px solid #a4a4a4;
+		width: 100%;
+		padding: 12px 20px;
+		height: 120px;
+		&::placeholder {
+			font-family: "Gotham";
+			font-size: 16px;
+			line-height: 150%;
+			color: #ababab;
+		}
+	}
+}
+.popup__form-pair-checkbox {
+	transition: all 0.3s ease 0s;
+	padding: 0 0 0 26px;
+	position: relative;
+	display: inline-flex;
+	cursor: pointer;
+	input {
+		display: none;
+	}
+	&:before {
+		content: "";
+		border: 1px solid #a4a4a4;
+		width: 16px;
+		height: 16px;
+		position: absolute;
+		top: 4px;
+		left: 0;
+	}
+	&:hover:before {
+		box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.5);
+		border: 1px solid;
+		border-image: linear-gradient(225deg, #6bb86c 0%, #0c988d 100%);
+		border-image-slice: 1;
+	}
+	&:after {
+		content: "";
+		transition: all 0.3s ease 0s;
+		width: 16px;
+		height: 16px;
+		position: absolute;
+		background: #0c988d;
+		background: url("../../img/tick.svg") center no-repeat, linear-gradient(225deg, #6bb86c 0%, #0c988d 100%);
+		top: 4px;
+		left: 0;
+		opacity: 0;
+		visibility: hidden;
+	}
+	&.active:after {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+.company-name-label {
+}
+.company-name-input {
+}
+.email-label {
+}
+.email-input {
+}
+.message-label {
+}
+.message-textarea {
+}
+.privacy-input {
+}
+.privacy-label {
+}
+.form__button {
+}
+.popup__button {
+}
