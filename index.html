@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width">
 	<meta name="description" content=""/>
 	<meta name="keywords" content="" />
+	<link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
     <link rel="stylesheet" href="css/style.css">
     <title>Mediaboss</title>
 </head>
@@ -21,7 +22,7 @@
 				<nav class="header__menu">
 					<ul class="header__list">
 						<li>
-							<a href="#popup" class="header__link">Contact us</a>
+							<a href="#popup1" class="header__link">Contact us</a>
 						</li>
 					</ul>
 				</nav>
@@ -29,13 +30,26 @@
 		</div>
 	</header>
 	<div class="mainscreen">
-		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum repudiandae, ipsum ut eos ea minus facere iste incidunt necessitatibus asperiores dolor distinctio provident, illum culpa voluptatibus odio saepe obcaecati officiis.</p>
-		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum repudiandae, ipsum ut eos ea minus facere iste incidunt necessitatibus asperiores dolor distinctio provident, illum culpa voluptatibus odio saepe obcaecati officiis.</p>
-		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum repudiandae, ipsum ut eos ea minus facere iste incidunt necessitatibus asperiores dolor distinctio provident, illum culpa voluptatibus odio saepe obcaecati officiis.</p>
-		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum repudiandae, ipsum ut eos ea minus facere iste incidunt necessitatibus asperiores dolor distinctio provident, illum culpa voluptatibus odio saepe obcaecati officiis.</p>
+		<video loop="" muted="" autoplay="" poster="img/poster.jpg" class="mainscreen__video">
+			<source src="video/video.mp4" type="video/mp4">
+		</video>
+		<div class="mainscreen__overlay">
+			<h1 class="mainscreen__title">
+				Media Boss
+			</h1>
+			<div class="mainscreen__text">
+				<p>
+					With our unique approach to mobile marketing, we make targeting and engaging the right audience a repeatable, scalable and successful reality.
+				</p>
+				<p>
+					Break into the market <span>“like a boss”</span>  with our advertising solutions
+				</p>
+			</div>
+		</div>
 	</div>
 </div>
-<div id="popup" class="popup">
+<div id="popup1" class="popup">
+	<a href="#header" class="popup__close-area"></a>
 	<div class="popup__body">
 		<div class="popup__content">
 			<a href="#header" class="popup__close"></a>
@@ -55,12 +69,26 @@
 				</div>
 				<div class="popup__form-pair popup__form-pair-checkbox">
 					<input checked id="privacy" type="checkbox" class="privacy-input" name="privacy" value="true">
-					<label for="privacy" class="privacy-label">I agree to the <a href="#">Privacy policy</a></label>
+					<label for="privacy" class="privacy-label">I agree to the</label>
 				</div>
+				<a href="#">Privacy policy</a>
 				<div class="form__button">
-					<button class="popup__button" type="submit">Send message</button>
+					<button class="popup__button" type="submit"><span>Send message</span></button>
 				</div>
 			</form>
+		</div>
+	</div>
+</div>
+<div id="popup2" class="popup">
+	<a href="#header" class="popup__close-area"></a>
+	<div class="popup__body">
+		<div class="popup__content popup2__content">
+			<a href="#header" class="popup__close"></a>
+			<div class="popup__title">Thank you <br> for the message</div>
+			<div class="popup__text">We will contact you in the near future</div>
+			<div class="form__button">
+				<a href="#header" class="popup__button"><span>Ok</span></a>
+			</div>
 		</div>
 	</div>
 </div>
