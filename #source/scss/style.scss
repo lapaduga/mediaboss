@@ -59,6 +59,9 @@ body {
 		max-width: 100%;
 		display: block;
 	}
+	@media (max-width: 375px){
+		padding-left: 20px;
+	}
 	@media (max-width: 360px) {
 		flex: 0 0 150px;
 	}
@@ -67,6 +70,9 @@ body {
 	display: flex;
 	li {
 		list-style: none;
+	}
+	@media (max-width: 375px){
+		padding-right: 20px;
 	}
 }
 .header__link {
@@ -689,18 +695,18 @@ line-height: 150%;
 		text-decoration: none;
 	}
 }
+.footer__devlogo-invisible{
+	display: none;
+	@media (max-width: 540px){
+		display: block;
+		height: 90px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
 .footer__devlogo {
 	@media (max-width: 540px){
 		display: none;
-	}
-}
-.footer__devlogo-invisible{
-	display: none;
-	height: 90px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	@media (max-width: 540px){
-		display: block;
 	}
 }
